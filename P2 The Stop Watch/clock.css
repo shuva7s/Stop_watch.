@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+}
+
+.crcl {
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(19, 19, 34);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1500px;
+    margin-inline: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.parent {
+    width: 65vmin;
+    position: relative;
+    background-color: rgb(21, 21, 44);
+    box-shadow: 0 0 1.3rem 2px rgba(196, 228, 255, 0.4);
+}
+
+.child {
+    font-size: 2rem;
+    color: rgb(109, 109, 129);
+    --distance: calc(30vmin - 2rem);
+}
+
+.absolute {
+    position: absolute;
+}
+
+.center {
+    width: 4%;
+    background-color: rgb(49, 145, 255);
+    z-index: 5;
+}
+
+.common {
+    transform-origin: left;
+}
+
+.sec {
+    width: 42%;
+    height: 1px;
+    background-color: rgb(49, 145, 255);
+    transform: translate(50%) rotate(270deg);
+    z-index: 4;
+}
+
+.min {
+    width: 37%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: rgb(214, 214, 214);
+    transform: translate(50%) rotate(270deg);
+    z-index: 3;
+}
+
+.hr {
+    width: 28%;
+    height: 7px;
+    border-radius: 5px;
+    background-color: rgb(255, 0, 60);
+    transform: translate(50%) rotate(270deg);
+    z-index: 2;
+}
+
+.secrot {
+    animation: rotation 60s linear infinite;
+}
+
+.minrot {
+    animation: rotation 3600s linear infinite;
+}
+
+.hrrot {
+    animation: rotation 43200s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: translate(50%) rotate(270deg);
+    }
+
+    50% {
+        transform: translate(50%) rotate(450deg);
+    }
+
+    100% {
+        transform: translate(50%) rotate(630deg);
+    }
+}
+
+#stopwatch {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 1.7rem;
+}
+
+.buttons button {
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    border: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.2150);
+}
+
+#stop {
+    display: none;
+}
+
+@media screen and (max-width:960px) {
+    body {
+        flex-direction: column;
+    }
+
+    .parent {
+        width: 64vmin;
+    }
+
+    .child {
+        font-size: 1.3rem;
+        --distance: calc(32vmin - 1.3rem);
+    }
+}

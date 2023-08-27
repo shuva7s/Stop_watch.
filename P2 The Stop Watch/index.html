@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clock.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Stopwatch</title>
+</head>
+
+<body>
+    <div class="parent centering crcl">
+        <div class="child absolute">1</div>
+        <div class="child absolute">2</div>
+        <div class="child absolute">3</div>
+        <div class="child absolute">4</div>
+        <div class="child absolute">5</div>
+        <div class="child absolute">6</div>
+        <div class="child absolute">7</div>
+        <div class="child absolute">8</div>
+        <div class="child absolute">9</div>
+        <div class="child absolute">10</div>
+        <div class="child absolute">11</div>
+        <div class="child absolute">12</div>
+        <div class="sec absolute common"></div>
+        <div class="min absolute common"></div>
+        <div class="hr absolute common"></div>
+        <div class="center crcl absolute"></div>
+    </div>
+
+    <div class="counter">
+        <div id="stopwatch">00:00.00</div>
+        <div class="buttons">
+            <button id="start" onclick="startStopwatch()">Start</button>
+            <button id="stop" onclick="stopStopwatch()">Stop</button>
+            <button id="reset" onclick="resetStopwatch()">Reset</button>
+        </div>
+    </div>
+
+    <script src="clock.js"></script>
+</body>
+
+</html>
